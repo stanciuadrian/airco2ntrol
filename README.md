@@ -1,15 +1,18 @@
-# airco2ntrold
+# airco2ntrol
 
-airco2ntrold is a simple tool to read values from a TFA Dostmann 'AirCO2ntrol Mini' CO2 monitor and publish them using MQTT.
+airco2ntrol is a simple tool to read/print values from a TFA Dostmann 'AirCO2ntrol Mini' CO2 monitor.
 
-## Alpha install instructions
+## Configuration
 
-*This software is currently in alpha state and only serves for testing purpose. Because of that there are many hardcoded parameters which make it very user-unfriendly. All code and documentation are subject to change.*
+Use `dmesg` to find the device path. Look for vendor `04d9` and product `a052`:
 
-1. pip paho-mqtt
-2. cd /usr/local
-3. git clone https://github.com/fablabnbg/airco2ntrold.git
-4. cd airco2ntrold/
-5. ln -s /usr/local/airco2ntrold/airco2ntrol /etc/init.d/aircon2troldd
-6. chmod +x airco2ntrold*
-7. update-rc.d airco2ntrold defaults
+```
+[    2.259541] usb 1-5.2: New USB device found, idVendor=04d9, idProduct=a052, bcdDevice= 1.00
+[    2.259663] usb 1-5.2: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[    2.259778] usb 1-5.2: Product: USB-zyTemp
+[    2.259865] usb 1-5.2: Manufacturer: Holtek
+[    2.259953] usb 1-5.2: SerialNumber: 1.40
+[    2.270086] hid-generic 0003:04D9:A052.0006: hiddev2,hidraw5: USB HID v1.10 Device [Holtek USB-zyTemp] on usb-0000:00:14.0-5.2/input0
+```
+
+The first parameter of `open()` should be set to `"/dev/hidraw5"` (airco2ntrol.py).
