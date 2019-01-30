@@ -1,6 +1,14 @@
 # airco2ntrol
 
-airco2ntrol is a simple tool to read/print values from a TFA Dostmann 'AirCO2ntrol Mini' CO2 monitor.
+airco2ntrol is a simple tool to read/print values from a [TFA Dostmann 'AirCO2ntrol Mini'](https://www.tfa-dostmann.de/en/produkt/co2-monitor-airco2ntrol-mini/) CO2 monitor.
+
+## Hardware
+
+Pictures of the tear down on a [Russian page](https://habr.com/en/company/masterkit/blog/248403/) and its [Googlish English](https://translate.google.com/translate?hl=&sl=ru&tl=en&u=https%3A%2F%2Fhabr.com%2Fen%2Fcompany%2Fmasterkit%2Fblog%2F248403%2F) translation.
+
+## Official Documentation
+
+The [user manual](http://co2meters.com/Documentation/Manuals/Manual-RAD-0301.pdf) and the [USB Communication Protocol](http://www.co2meters.com/Documentation/AppNotes/AN135-CO2mini-usb-protocol.pdf).
 
 ## Configuration
 
